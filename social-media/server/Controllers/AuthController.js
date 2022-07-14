@@ -35,7 +35,7 @@ export const loginUser = async (req, res) => {
         ? res.status(200).json(user)
         : res.status(400).json("Wrong password");
     } else {
-      res.status(400).json("Wrong password");
+      res.status(404).json("User does not exist");
     }
   } catch (error) {
     res.status(500).json({ message: error.message });
