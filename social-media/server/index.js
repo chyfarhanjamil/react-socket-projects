@@ -4,6 +4,7 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import AuthRoute from "./Routes/AuthRoute.js";
 import UserRoute from "./Routes/UserRoute.js";
+import PostRoute from "./Routes/PostRoute.js";
 
 // PORT=5000
 // MONGO_DB=mongodb+srv://admin:admin@social.okuhgw8.mongodb.net/SocialMedia_Youtube?retryWrites=true&w=majority
@@ -32,3 +33,4 @@ mongoose
 //all routes
 app.use("/auth", AuthRoute);
 app.use("/user", UserRoute);
+app.use("/post", PostRoute);
