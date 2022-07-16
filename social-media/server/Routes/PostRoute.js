@@ -3,13 +3,15 @@ import {
   createPost,
   deletePost,
   getPost,
+  getTimelinePosts,
   likePost,
   updatePost,
 } from "../Controllers/PostController.js";
 const router = express.Router();
 
-router.post("/", createPost);
 router.get("/:id", getPost);
+router.get("/:id/timeline", getTimelinePosts);
+router.post("/", createPost);
 router.put("/:id", updatePost);
 router.put("/:id/like", likePost);
 router.delete("/:id", deletePost);
